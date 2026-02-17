@@ -1,11 +1,11 @@
 [package]
-name = "nimage"
+name = "pixal"
 description = "A simple imaging library"
 version = "0.1.5"
 edition = "2024"
 authors = ["NDRAEY <pikachu_andrey@vk.com>"]
 license = "MIT"
-repository = "https://github.com/NDRAEY/nimage"
+repository = "https://github.com/NDRAEY/Pixal"
 categories = ["graphics", "multimedia", "no-std"]
 keywords = ["canvas", "image", "no_std"]
 exclude = ["static/*"]

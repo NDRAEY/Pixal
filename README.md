@@ -1,6 +1,6 @@
-# NImage
+# Pixal (was known as `nimage`)
 
-NImage is a crate that provides basic image processing functions.
+Pixal is a crate that provides basic image processing functions.
 
 Inspired by [image](https://crates.io/crates/image) crate.
 
