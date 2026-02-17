@@ -10,10 +10,13 @@ fn main() {
 
     let data = std::fs::read(filename.unwrap()).unwrap();
 
-    let mut image = pixal::tga::from_tga_data(data.as_slice()).unwrap();
-    image.rotate_left();
+    let (_, image) = pixal::import::open(data.as_slice()).unwrap();
 
-    println!("use `ffplay -f rawvideo -video_size {}x{} -pixel_format rgb24 -i out.bin`", image.width(), image.height());
+    let bpp = image.pixel_format().bits_per_pixel();
+
+    println!("Pixel format: {:?}", image.pixel_format());
+
+    println!("use `ffplay -f rawvideo -video_size {}x{} -pixel_format rgb{} -i out.bin`", image.width(), image.height(), bpp);
     
     {
         let mut file = std::fs::File::create("out.bin").unwrap();
